@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    height: 100vh;
+    gap: 20px;
+    cursor: pointer;
+}
+.titulo{
+    color: white;
+    background-color: rgba(0, 0, 0, 50%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+.texto{
+    color: white;
+    background-color: rgba(0, 0, 0, 50%);
+    width: 30vh;
+    max-height: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding-inline: 10px;
+}
+.background{
+    z-index: -1;
+    position: absolute;
+    width: 30vh;
+}
