@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="./js/main.js" type="module" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Acme Filmes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/main.js" type="module" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Acme Filmes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    <div class="container" id="container"></div>    
+
+<body class="w-screen h-screen bg-gradient-to-b from-red-900 to-blue-950 flex flex-col overflow-hidden z-0">
+
+  <div class="header flex align-center w-full">
+
+    <div class="perfil bg-gray-300 w-16 h-16 flex justify-center rounded-full ml-5 mt-5">
+      <img src="./img/vetor pessoa 1.svg" alt="" class="icon w-10">
+    </div>
+
+    <div class="barra-pesquisa w-52 h-9 bg-gray-300 flex align-center ml-5 mt-8 rounded-l-lg">
+      <img src="./img/vetor pesquisa 1.svg" alt="" class="lupa w-8">
+      <input type="text" class="pesquisa bg-gray-300 rounded-r-lg focus:outline-none ml-2 text-lg font-sans">
+    </div>
+  </div>
+
+  <h2 class="destaque mt-5 ml-5 text-white font-semibold text-lg z-10">Filmes em Destaque</h2>
+  <div class="container-filmes flex row gap-28 mt-2 ml-5" id="container"></div>
+
+  <h2 class="recomendacoes text-white">Recomendações para Você</h2>
+
+
 </body>
+
 </html>

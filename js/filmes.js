@@ -12,4 +12,4 @@ export async function getFilme(id){
     const data = await response.json()
     
     return data.file[0]
-}
+} 
