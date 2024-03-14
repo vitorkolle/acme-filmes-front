@@ -18,24 +18,29 @@
       </script>
 </head>
 
-<body class="w-screen h-screen bg-gradient-to-b from-red-900 to-blue-950 flex flex-col overflow-hidden z-0">
+<body class="w-full h-full bg-gradient-to-b from-red-900 to-blue-950 flex flex-col z-0 relative overflow-x-hidden">
 
   <div class="header flex align-center w-full">
 
-    <div class="perfil bg-gray-300 w-16 h-16 flex justify-center rounded-full ml-5 mt-5">
-      <img src="./img/vetor pessoa 1.svg" alt="" class="icon w-10">
+    <div class="perfil bg-gray-300 w-20 h-20 h-16 flex justify-center rounded-full ml-5 mt-5">
+      <img src="./img/vetor pessoa 1.svg" alt="" class="icon w-12">
     </div>
 
-    <div class="barra-pesquisa w-52 h-9 bg-gray-300 flex align-center ml-5 mt-8 rounded-l-lg">
-      <img src="./img/vetor pesquisa 1.svg" alt="" class="lupa w-8">
-      <input type="text" class="pesquisa bg-gray-300 rounded-r-lg focus:outline-none ml-2 text-lg font-sans">
+    <div class="barra-pesquisa w-80 h-9 bg-gray-300 flex align-center ml-5 mt-12 rounded-lg">
+      <img src="./img/vetor pesquisa 1.svg" alt="" class="lupa w-8 ml-2">
+      <input type="text" class="pesquisa bg-gray-300 rounded-r-lg focus:outline-none ml-5 text-lg font-sans w-3/4">
     </div>
   </div>
 
-  <h2 class="destaque mt-5 ml-5 text-white font-semibold text-lg z-10">Filmes em Destaque</h2>
-  <div class="container-filmes flex row gap-28 mt-2 ml-5" id="container"></div>
+  <h2 class="destaque ml-20 text-white font-semibold text-4xl z-10">Filmes em Destaque</h2>
+  <div class="container-filmes flex gap-72 ml-44 mt-5" id="container"></div>
 
-  <h2 class="recomendacoes text-white">Recomendações para Você</h2>
+  <h2 class="recomendacoes text-white mt-80 ml-20 text-4xl font-semibold">Recomendações para Você</h2>
+  <div class="container-filmes flex flex-row-reverse gap-72 ml-44 mt-5 justify-end" id="container2"></div>
+
+  <footer class="flex justify-center mt-80">
+    <img src="./img/Logo Desktop.png" alt="">
+  </footer>
 
 
 </body>

@@ -3,10 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-.background{
-    z-index: -1;
-    position: absolute;
-    width: 25vw;
-    border-radius: 5%;
-    border: 2px solid black;
+.card{
+    cursor: pointer;
+}
+.capa{
+  position: absolute;
+  width: 12vw;
 }
