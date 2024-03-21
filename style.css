@@ -10,3 +10,29 @@
   position: absolute;
   width: 12vw;
 }
+.background-player{
+  z-index: 30;
+  position: absolute;
+  width: 42vw;
+  opacity: 50%;
+}
+.titulo-filme{
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 20px;
+}
+.icone{
+  width: 6vw;
+  cursor: pointer;
+}
+.sinopse{
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+}
+.itens{
+  position: absolute;
+}

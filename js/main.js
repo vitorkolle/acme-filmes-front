@@ -24,23 +24,37 @@ async function mostrarCards(){
         const card = criarCards(filme)
         
         card.onclick = function(){
-            let idFilme = (filme.id)
-            passarDadosFilme(idFilme)
+            const dadosFilme = {}
+            dadosFilme.nome = filme.nome
+            dadosFilme.sinopse = filme.sinopse
+            dadosFilme.duracao = filme.duracao
+            dadosFilme.data_lancameno = filme.data_lancamento
+            dadosFilme.foto_capa = filme.foto_capa
+            dadosFilme.preco_unitario = filme.preco_unitario       
+            passarDadosFilme(dadosFilme)
         }    
         container.appendChild(card)    
     });
 
     filmes.forEach(filme => {
         const card = criarCards(filme)
+        
         card.onclick = function(){
-            passarDadosFilme(filme)
-        }  
+            const dadosFilme = {}
+            dadosFilme.nome = filme.nome
+            dadosFilme.sinopse = filme.sinopse
+            dadosFilme.duracao = filme.duracao
+            dadosFilme.data_lancameno = filme.data_lancamento
+            dadosFilme.foto_capa = filme.foto_capa
+            dadosFilme.preco_unitario = filme.preco_unitario       
+            passarDadosFilme(dadosFilme)
+        }    
         container2.appendChild(card)       
     });
 }
 
-function passarDadosFilme(idFilme){
-   localStorage.setItem('dadosFilme', JSON.stringify(idFilme))
+function passarDadosFilme(dadosFilme){
+   localStorage.setItem('dadosFilme', JSON.stringify(dadosFilme))
    window.location.href = "../pag-home.html"
 }
 
