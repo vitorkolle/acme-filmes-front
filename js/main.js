@@ -23,8 +23,18 @@ async function mostrarCards(){
 
     filmes.forEach(filme => {
         const card = criarCards(filme)
+        
         card.onclick = function(){
-            passarDadosFilme(filme)
+            let filmeJson = {
+                "nome": filme.nome,
+                "sinopse": filme.sinopse,
+                "duracao": filme.duracao,
+                "data_lancamento": filme.data_lancamento,
+                "data_relancamento": filme.data_relancamento,
+                "foto_capa": filme.foto_capa,
+                "valor_unitario": filme.valor_unitario
+            }
+            passarDadosFilme(filmeJson)
         }    
         container.appendChild(card)    
     });
@@ -38,8 +48,9 @@ async function mostrarCards(){
     });
 }
 
-async function passarDadosFilme(filme){
-   console.log(filme)
+function passarDadosFilme(filmeJson){
+   localStorage.setItem('dadosFilme', filmeJson)
+   window.location.href = "../pag-home.html"
 }
 
 mostrarCards()
