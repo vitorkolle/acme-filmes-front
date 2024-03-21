@@ -17,31 +17,29 @@ function criarCards(filme){
 async function mostrarCards(){
     const container = document.getElementById('container')
     const container2 = document.getElementById('container2')
+
     const filmes = await getFilmes()
-
-    // for (let i = 0; i < filmes.length; i++) {
-    //     if(i < 5){
-    //         const card = criarCards(filmes)
-    //         container.appendChild(card)
-    //         console.log(card)        
-    //     }else if(i < 10){
-    //         const card = criarCards(filmes)
-    //         container2.appendChild(card)
-    //         console.log()
-    //     }        
-    // }
+    
 
     filmes.forEach(filme => {
         const card = criarCards(filme)
-        container.appendChild(card)
-        console.log(card)        
+        card.onclick = function(){
+            passarDadosFilme(filme)
+        }    
+        container.appendChild(card)    
     });
 
     filmes.forEach(filme => {
         const card = criarCards(filme)
-        container2.appendChild(card)
-        console.log(card)        
+        card.onclick = function(){
+            passarDadosFilme(filme)
+        }  
+        container2.appendChild(card)       
     });
+}
+
+async function passarDadosFilme(filme){
+   console.log(filme)
 }
 
 mostrarCards()
