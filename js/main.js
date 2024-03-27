@@ -8,7 +8,7 @@ function criarCards(filme){
 
     const img = document.createElement('img')
     img.src = filme.foto_capa
-    img.classList.add('capa')
+    img.classList.add('capa') 
 
     card.append(img)
     return card    
@@ -28,9 +28,9 @@ async function mostrarCards(){
             dadosFilme.nome = filme.nome
             dadosFilme.sinopse = filme.sinopse
             dadosFilme.duracao = filme.duracao
-            dadosFilme.data_lancameno = filme.data_lancamento
+            dadosFilme.data_lancamento = filme.data_lancamento
             dadosFilme.foto_capa = filme.foto_capa
-            dadosFilme.preco_unitario = filme.preco_unitario       
+            dadosFilme.preco_unitario = filme.valor_unitario       
             passarDadosFilme(dadosFilme)
         }    
         container.appendChild(card)    
@@ -44,9 +44,9 @@ async function mostrarCards(){
             dadosFilme.nome = filme.nome
             dadosFilme.sinopse = filme.sinopse
             dadosFilme.duracao = filme.duracao
-            dadosFilme.data_lancameno = filme.data_lancamento
+            dadosFilme.data_lancamento = filme.data_lancamento
             dadosFilme.foto_capa = filme.foto_capa
-            dadosFilme.preco_unitario = filme.preco_unitario       
+            dadosFilme.preco_unitario = filme.valor_unitario       
             passarDadosFilme(dadosFilme)
         }    
         container2.appendChild(card)       
