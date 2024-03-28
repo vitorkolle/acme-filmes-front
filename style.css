@@ -34,7 +34,7 @@
   color: white;
   text-align: center;
   margin-left: 40px;
-  margin-top: -7vh;
+  margin-top: 2vh;
   font-size: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-right:70px;
+  margin-right: 6vw;
   margin-top: -55vh;
 }
 .img-itens{
